@@ -9,14 +9,16 @@ on it for about five minutes without solving it.
 Problems
 ==============
 
-
-
-.. selectquestion:: p3dnd-wd-list-loop-two-lists-sq
-   :fromid: list_loop_two_lists_pp
+.. selectquestion:: p3dnd-front-back-wd-sq
+   :fromid: p3dnd-front-back-wd
    :points: 10
 
 .. selectquestion:: p3dnd-wd-has22-parsons-sq
    :fromid: has22_Parsons-Version-A
+   :points: 10
+
+.. selectquestion:: p3dnd-is-level-wd-sq
+   :fromid: p3dnd-is-level-wd
    :points: 10
 
 .. selectquestion:: p3dnd-wd-sum13-parsons-sq
