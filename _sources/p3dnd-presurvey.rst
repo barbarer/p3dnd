@@ -107,7 +107,7 @@ about the specified concept(s).
     :option_5: I am confident in my ability to use this concept in complex programs
     :results: instructor
 
-    Lists like <code>a = ["red", "green"]</code>
+    Lists like <code>a = [1, 2, 3]</code>
 
 Feedback
 ==================================

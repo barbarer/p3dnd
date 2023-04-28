@@ -9,28 +9,28 @@ on it for about five minutes without solving it.
 Problems
 ==============
 
-.. selectquestion:: p3dnd-front-back-wd-sq
-   :fromid: p3dnd-front-back-wd
+.. selectquestion:: p3dnd-front-back-nd-sq
+   :fromid: p3dnd-front-back-nd
    :points: 10
 
-.. selectquestion:: p3dnd-in-back-wd-sq
-   :fromid: p3dnd-in-back-wd
+.. selectquestion:: p3dnd-in-back-nd-sq
+   :fromid: p3dnd-in-back-nd
    :points: 10
 
-.. selectquestion:: p3dnd-has22-parsons-wd-sq
-   :fromid: has22_Parsons-Version-B
+.. selectquestion:: p3dnd-has22-parsons-nd-sq
+   :fromid: has22_Parsons-Version-A-nd
    :points: 10
 
-.. selectquestion:: p3dnd-is-level-wd-sq
-   :fromid: p3dnd-is-level-wd
+.. selectquestion:: p3dnd-is-level-nd-sq
+   :fromid: p3dnd-is-level-nd
    :points: 10
 
-.. selectquestion:: p3dnd-sum13-parsons-wd-sq
-   :fromid: sum13-Parsons-version-pilot
+.. selectquestion:: p3dnd-sum13-parsons-nd-sq
+   :fromid: sum13-Parsons-version-pilot-nd
    :points: 10
 
-.. selectquestion:: p3dnd-total-eight-nine-wd-sq
-   :fromid: p3dnd-total-eight-nine-wd
+.. selectquestion:: p3dnd-total-eight-nine-nd-sq
+   :fromid: p3dnd-total-eight-nine-nd
    :points: 10
 
 Feedback
