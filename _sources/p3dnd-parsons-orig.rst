@@ -349,7 +349,7 @@ Problems
    =====
                continue
    =====
-               break :paired: use continue
+               break #paired: use continue
    =====
            else:
    =====
