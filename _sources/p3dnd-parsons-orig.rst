@@ -572,11 +572,81 @@ Problems
     =====
         return nums
 
+<!-- David's: https://codingbat.com/prob/p102145-->
 
+.. parsonsprob:: p3dnd-two-two-nd
 
+   :numbered: left
+   :adaptive:
+   :noindent:
 
+   Given an array of ints, return true if every 2 that appears in the array is next to another 2.
 
+   * twoTwo([4, 2, 2, 3]) → true
+   * twoTwo([2, 2, 4]) → true
+   * twoTwo([2, 2, 4, 2]) → false
 
+   -----
+   def twoTwo(nums):
+   =====
+     for i in range(len(nums)):
+    =====
+        if nums[i] == 2:
+    =====
+            if i > 0 and nums[i-1] == 2:
+    =====
+                continue
+    =====
+            elif i < len(nums) - 1 and nums[i+1] == 2:
+    =====
+                continue
+    =====
+            else:
+    =====
+                return False
+    =====
+    return True
+
+.. parsonsprob:: p3dnd-two-two-wd
+
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+
+   * twoTwo([4, 2, 2, 3]) → true
+   * twoTwo([2, 2, 4]) → true
+   * twoTwo([2, 2, 4, 2]) → false
+
+   -----
+   def twoTwo(nums):
+   =====
+     for i in range(len(nums)):
+    =====
+        if nums[i] == 2:
+    =====
+            if i > 0 and nums[i-1] == 2:
+    =====
+            if nums[i-1] == 2: #paired: This fails to check if we are at the beginning of the array before checking the previous element
+    =====
+                continue
+    =====
+                break #paired: if we break we may end before checking all the 2s
+    =====
+            elif i < len(nums) - 1 and nums[i+1] == 2:
+    =====
+            elif nums[i+1] == 2: #paired: This fails to check if we are at the end of the array before checking the next element
+    =====
+                continue
+    =====
+                break #paired: if we break we may end before checking all the 2s
+    =====
+            else:
+    =====
+                return False
+    =====
+    return True
 
 
 
