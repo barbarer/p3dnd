@@ -608,7 +608,6 @@ Problems
     return True
 
 .. parsonsprob:: p3dnd-two-two-wd
-
    :numbered: left
    :adaptive:
    :noindent:
@@ -648,10 +647,55 @@ Problems
     =====
     return True
 
+<!-- David's: https://codingbat.com/prob/p175762-->
 
+.. parsonsprob:: p3dnd-bob-there-nd
+   :numbered: left
+   :adaptive:
+   :noindent:
 
+   Return true if the given string contains a "bob" string, but where the middle 'o' char can be any char.
 
+   * bobThere("abcbob") → true
+   * bobThere("b9b") → true
+   * bobThere("bac") → false
 
+    -----
+    def bobThere(str):
+    =====
+        for i in range(len(str)-2):
+    =====
+            if str[i] == 'b' and str[i+2] == 'b':
+    =====
+                return True
+    =====
+        return False
+
+.. parsonsprob:: p3dnd-bob-there-wd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Return true if the given string contains a "bob" string, but where the middle 'o' char can be any char.
+
+   * bobThere("abcbob") → true
+   * bobThere("b9b") → true
+   * bobThere("bac") → false
+
+    -----
+    def bobThere(str):
+    =====
+        for i in range(len(str)-2):
+    =====
+        for i in range(len(str)): #paired: need to interate over the length minus 2 so as not to go out of bounds
+    =====
+            if str[i] == 'b' and str[i+2] == 'b':
+    =====
+            if str[i] == 'b' and str[i] == 'b': #paired: Needs to check if hte first and last letter are b
+    =====
+                return True
+    =====
+        return False
 
 
 
