@@ -688,11 +688,103 @@ Problems
    =====
        return False
 
+.. parsonsprog:: p3dnd-two-sum-nd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Given an array of integers nums and an integer target, return indices of the
+   two numbers such that they add up to target. If no two numbers add up to
+   target, return an empty array.
+
+   You may assume that each input would have exactly one solution, and you may
+   not use the same element twice.
+
+   For example for nums=[2, 7, 11, 15] and target = 9 will return [0, 1] as
+   the numbers at index 0 and 1 add up to 9.
+   -----
+   def twoSum(nums, target):
+   =====
+      for i in range(len(nums)):
+   =====
+           for j in range(i+1, len(nums)):
+   =====
+               if nums[i] + nums[j] == target:
+   =====
+                   return [i, j]
+   =====
+      return []
+
+
+.. parsonsprog:: p3dnd-two-sum-wd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Given an array of integers nums and an integer target, return indices of the
+   two numbers such that they add up to target. If no two numbers add up to
+   target, return an empty array.
+
+   You may assume that each input would have exactly one solution, and you may
+   not use the same element twice.
+
+   For example for nums=[2, 7, 11, 15] and target = 9 will return [0, 1] as
+   the numbers at index 0 and 1 add up to 9.
+   -----
+   def twoSum(nums, target):
+   =====
+      for i in range(len(nums)):
+   =====
+           for j in range(i+1, len(nums)):
+   =====
+           for j in range(i, len(nums)): #paired: need to start at i+1 so as not to check the same element twice
+   =====
+               if nums[i] + nums[j] == target:
+   =====
+               if nums[i] + nums[i] = target: #paired: need to use comparison operator instead of assignment operator
+   =====
+                   return [i, j]
+   =====
+      return []
 
 
 
+.. parsonsprog:: p3dnd-palindrome-number-nd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Given an integer x, return true if x is a palindrome , and false otherwise.
+
+   For example, 121 is a palindrome, as well as 888. 678 is not a palindrome.
+   Additionally, negative numbers cannot be palindromes.
+   -----
+   def isPalindrome(x):
+   =====
+      left = 0
+      right = len(string) - 1
+   =====
+      left = 0
+      right = len(string) #paired: right should be one less than the length of the string
+   ===== 
+      while left < right:
+   =====
+         if string[left] != string[right]:
+   =====
+              return False
+   =====
+        left += 1
+        right -= 1
+   =====
+        left -= 1
+        right += 1 #paired: left and right should be incremented and decremented respectively
+    =====
+      return True
+        
 
 
+
+      
 
 
 
