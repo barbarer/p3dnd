@@ -357,8 +357,6 @@ Problems
    =====
        return sum
 
-<!-- David's: https://codingbat.com/java/String-3-->
-
 .. parsonsprob:: p3dnd-sum-digits-nd
    :numbered: left
    :adaptive:
@@ -372,7 +370,6 @@ Problems
    sumDigits("aa1bc2d3") → 6
    sumDigits("aa11b33") → 8
    sumDigits("Chocolate") → 0
-
    -----
    def sumDigits(string):
    =====
@@ -402,7 +399,6 @@ Problems
    * sumDigits("aa1bc2d3") → 6
    * sumDigits("aa11b33") → 8
    * sumDigits("Chocolate") → 0
-
    -----
    def sumDigits(string):
    =====
@@ -421,8 +417,6 @@ Problems
       return total
    =====
       print(total) #paired: need to return not print
-    
-<!-- David's: https://codingbat.com/prob/p179479-->
 
 .. parsonsprob:: p3dnd-max-block-nd
    :numbered: left
@@ -435,7 +429,6 @@ Problems
    * maxBlock("hoopla") → 2
    * maxBlock("abbCCCddBBBxx") → 3
    * maxBlock("") → 0
-
    -----
    def maxBlock(string):
    =====
@@ -472,7 +465,6 @@ Problems
    * maxBlock("hoopla") → 2
    * maxBlock("abbCCCddBBBxx") → 3
    * maxBlock("") → 0
-
    -----
    def maxBlock(string):
    =====
@@ -504,108 +496,108 @@ Problems
    =====
        return max
 
-<!-- David's: https://codingbat.com/prob/p179479-->
-
 .. parsonsprob:: p3dnd-zero-front-nd
    :numbered: left
    :adaptive:
    :noindent:
 
-   Return an array that contains the exact same numbers as the given array, but rearranged so that all the zeros are grouped at the start of the array. The order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the given array or make a new array.
+   Return an array that contains the exact same numbers as the given array, but
+   rearranged so that all the zeros are grouped at the start of the array. The
+   order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0
+   ,0, 1, 1}. You may modify and return the given array or make a new array.
 
    * zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
    * zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
    * zeroFront([1, 0]) → [0, 1]
-
-    -----
-    def zeroFront(nums):
-    =====
-        zero_idx = 0 
-    =====
-        for i in range(len(nums)):
-    =====
-            if nums[i] == 0:
-    =====
-               tmp = nums[i]
-    =====
-               nums[i] = nums[zero_idx]
-    =====
-               nums[zero_idx] = tmp
-    =====
-               zero_idx += 1
-    =====
-        return nums
+   -----
+   def zeroFront(nums):
+   =====
+       zero_idx = 0 
+   =====
+       for i in range(len(nums)):
+   =====
+           if nums[i] == 0:
+   =====
+              tmp = nums[i]
+   =====
+              nums[i] = nums[zero_idx]
+   =====
+              nums[zero_idx] = tmp
+   =====
+              zero_idx += 1
+   =====
+       return nums
           
 .. parsonsprob:: p3dnd-zero-front-wd
    :numbered: left
    :adaptive:
    :noindent:
 
-   Return an array that contains the exact same numbers as the given array, but rearranged so that all the zeros are grouped at the start of the array. The order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the given array or make a new array.
+   Return an array that contains the exact same numbers as the given array, but
+   rearranged so that all the zeros are grouped at the start of the array. The
+   order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0
+   ,0, 1, 1}. You may modify and return the given array or make a new array.
 
    * zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
    * zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
    * zeroFront([1, 0]) → [0, 1]
+   -----
+   def zeroFront(nums):
+   =====
+       zero_idx = 0 
+   =====
+       for i in range(len(nums)):
+   =====
+       for i in nums: #paired: need to iterate over the length of the array not the array itself
+   =====
+           if nums[i] == 0:
+   =====
+           if nums[i] != 0: #paired: need to check if the number is not zero
+   =====
+              tmp = nums[i]
+   =====
+              nums[i] = nums[zero_idx]
+   =====
+              nums[zero_idx] = tmp
+   =====
+              zero_idx += 1
+   =====
+              zero_idx + 1 #paired: need to set the zero_idx variable when incrementing
+   =====
+       return nums
 
-    -----
-    def zeroFront(nums):
-    =====
-        zero_idx = 0 
-    =====
-        for i in range(len(nums)):
-    =====
-        for i in nums: #paired: need to iterate over the length of the array not the array itself
-    =====
-            if nums[i] == 0:
-    =====
-            if nums[i] != 0: #paired: need to check if the number is not zero
-    =====
-               tmp = nums[i]
-    =====
-               nums[i] = nums[zero_idx]
-    =====
-               nums[zero_idx] = tmp
-    =====
-               zero_idx += 1
-    =====
-               zero_idx + 1 #paired: need to set the zero_idx variable when incrementing
-    =====
-        return nums
-
-<!-- David's: https://codingbat.com/prob/p102145-->
 
 .. parsonsprob:: p3dnd-two-two-nd
-
    :numbered: left
    :adaptive:
    :noindent:
 
-   Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+   Given an array of ints, return true if every 2 that appears in the array is
+   next to another 2.
 
    * twoTwo([4, 2, 2, 3]) → true
    * twoTwo([2, 2, 4]) → true
    * twoTwo([2, 2, 4, 2]) → false
-
    -----
    def twoTwo(nums):
    =====
      for i in range(len(nums)):
-    =====
+   =====
         if nums[i] == 2:
-    =====
-            if i > 0 and nums[i-1] == 2:
-    =====
-                continue
-    =====
-            elif i < len(nums) - 1 and nums[i+1] == 2:
-    =====
-                continue
-    =====
-            else:
-    =====
-                return False
-    =====
-    return True
+   =====
+           if i > 0 and nums[i-1] == 2:
+   =====
+               continue
+   =====
+           elif i < len(nums) - 1 and nums[i+1] == 2:
+   =====
+               continue
+   =====
+           else:
+   =====
+               return False
+   =====
+     return True
 
 .. parsonsprob:: p3dnd-two-two-wd
    :numbered: left
@@ -621,81 +613,80 @@ Problems
    -----
    def twoTwo(nums):
    =====
-     for i in range(len(nums)):
-    =====
-        if nums[i] == 2:
-    =====
-            if i > 0 and nums[i-1] == 2:
-    =====
-            if nums[i-1] == 2: #paired: This fails to check if we are at the beginning of the array before checking the previous element
-    =====
-                continue
-    =====
-                break #paired: if we break we may end before checking all the 2s
-    =====
-            elif i < len(nums) - 1 and nums[i+1] == 2:
-    =====
-            elif nums[i+1] == 2: #paired: This fails to check if we are at the end of the array before checking the next element
-    =====
-                continue
-    =====
-                break #paired: if we break we may end before checking all the 2s
-    =====
-            else:
-    =====
-                return False
-    =====
-    return True
+       for i in range(len(nums)):
+   =====
+         if nums[i] == 2:
+   =====
+           if i > 0 and nums[i-1] == 2:
+   =====
+           if nums[i-1] == 2: #paired: This fails to check if we are at the beginning of the array before checking the previous element
+   =====
+               continue
+   =====
+               break #paired: if we break we may end before checking all the 2s
+   =====
+           elif i < len(nums) - 1 and nums[i+1] == 2:
+   =====
+           elif nums[i+1] == 2: #paired: This fails to check if we are at the end of the array before checking the next element
+   =====
+               continue
+   =====
+               break #paired: if we break we may end before checking all the 2s
+   =====
+           else:
+   =====
+               return False
+   =====
+     return True
 
-<!-- David's: https://codingbat.com/prob/p175762-->
 
 .. parsonsprob:: p3dnd-bob-there-nd
    :numbered: left
    :adaptive:
    :noindent:
 
-   Return true if the given string contains a "bob" string, but where the middle 'o' char can be any char.
+   Return true if the given string contains a "bob" string, but where the
+   middle 'o' char can be any char.
 
    * bobThere("abcbob") → true
    * bobThere("b9b") → true
    * bobThere("bac") → false
-
-    -----
-    def bobThere(str):
-    =====
-        for i in range(len(str)-2):
-    =====
-            if str[i] == 'b' and str[i+2] == 'b':
-    =====
-                return True
-    =====
-        return False
+   -----
+   def bobThere(str):
+   =====
+       for i in range(len(str)-2):
+   =====
+           if str[i] == 'b' and str[i+2] == 'b':
+   =====
+               return True
+   =====
+       return False
 
 .. parsonsprob:: p3dnd-bob-there-wd
    :numbered: left
    :adaptive:
    :noindent:
 
-   Return true if the given string contains a "bob" string, but where the middle 'o' char can be any char.
+   Return true if the given string contains a "bob" string, but where the
+   middle 'o' char can be any char.
 
    * bobThere("abcbob") → true
    * bobThere("b9b") → true
    * bobThere("bac") → false
-
-    -----
-    def bobThere(str):
-    =====
-        for i in range(len(str)-2):
-    =====
-        for i in range(len(str)): #paired: need to interate over the length minus 2 so as not to go out of bounds
-    =====
-            if str[i] == 'b' and str[i+2] == 'b':
-    =====
-            if str[i] == 'b' and str[i] == 'b': #paired: Needs to check if hte first and last letter are b
-    =====
-                return True
-    =====
-        return False
+   -----
+   def bobThere(str):
+   =====
+       for i in range(len(str)-2):
+   =====
+       for i in range(len(str)): #paired: need to interate over the length minus 2 so as not to go out of bounds
+   =====
+           if str[i] == 'b' and str[i+2] == 'b':
+   =====
+           if str[i] == 'b' and str[i] == 'b': #paired: Needs to check if hte first and last letter are b
+   =====
+               return True
+   =====
+       return False
 
 
 
