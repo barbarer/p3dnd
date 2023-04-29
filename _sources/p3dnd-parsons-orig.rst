@@ -357,4 +357,249 @@ Problems
    =====
        return sum
 
+<!-- David's: https://codingbat.com/java/String-3-->
+
+.. parsonsprob:: p3dnd-sum-digits-nd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Given a string, return the sum of the digits 0-9 that appear in the string,
+   ignoring all other characters. Return 0 if there are no digits in the
+   string. (Note: Character.isDigit(char) tests if a char is one of the chars
+   '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+
+   sumDigits("aa1bc2d3") → 6
+   sumDigits("aa11b33") → 8
+   sumDigits("Chocolate") → 0
+
+   -----
+   def sumDigits(string):
+   =====
+       total = 0
+   =====
+       for character in string:
+   =====
+           if chatracter >= '0' and character <= '9':
+   =====
+               digit = int(character)
+   =====
+               total += digit
+   =====
+      return total
+   
+
+.. parsonsprob:: p3dnd-sum-digits-wd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Given a string, return the sum of the digits 0-9 that appear in the string,
+   ignoring all other characters. Return 0 if there are no digits in the
+   string. (Note: Character.isDigit(char) tests if a char is one of the chars
+   '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+
+   * sumDigits("aa1bc2d3") → 6
+   * sumDigits("aa11b33") → 8
+   * sumDigits("Chocolate") → 0
+
+   -----
+   def sumDigits(string):
+   =====
+       total = 0
+   =====
+       for character in string:
+   =====
+           if chatracter >= '0' and character <= '9':
+   =====
+           if chatracter < '0' and character > '9': #paired: need to check if character is within that range not outside it.
+   =====
+               total += int(character)
+   =====
+               total += character #paired: need to convert to int
+   =====
+      return total
+   =====
+      print(total) #paired: need to return not print
     
+<!-- David's: https://codingbat.com/prob/p179479-->
+
+.. parsonsprob:: p3dnd-max-block-nd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Given a string, return the length of the largest "block" in the string. A
+   block is a run of adjacent chars that are the same.
+
+   * maxBlock("hoopla") → 2
+   * maxBlock("abbCCCddBBBxx") → 3
+   * maxBlock("") → 0
+
+   -----
+   def maxBlock(string):
+   =====
+       max = 0
+   =====
+       for i in range(len(string)):
+   =====
+           count = 1
+   =====
+           for j in range(i+1, len(string)):
+   =====
+               if string[i] == string[j]:
+   =====
+                   count += 1
+   =====
+               else:
+   =====
+                   break
+   =====
+           if count > max:
+   =====
+               max = count
+   =====
+       return max
+
+.. parsonsprob:: p3dnd-max-block-wd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Given a string, return the length of the largest "block" in the string. A
+   block is a run of adjacent chars that are the same.
+
+   * maxBlock("hoopla") → 2
+   * maxBlock("abbCCCddBBBxx") → 3
+   * maxBlock("") → 0
+
+   -----
+   def maxBlock(string):
+   =====
+       max = 0
+   =====
+       for i in range(len(string)):
+   =====
+       for i in range(string): #paired: need to iterate over the length of the string not the string itself
+   =====
+           count = 1
+   =====
+           for j in range(i+1, len(string)):
+   =====
+               if string[i] == string[j]:
+   =====
+                   count += 1
+   =====
+               else:
+   =====
+                   break
+   =====
+                   continue #paired: should break out of the loop as we are done with this block
+   =====
+           if count > max:
+   =====
+           if count < max: #paired: need to check if count is greater than max not less than
+   =====
+               max = count
+   =====
+       return max
+
+<!-- David's: https://codingbat.com/prob/p179479-->
+
+.. parsonsprob:: p3dnd-zero-front-nd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Return an array that contains the exact same numbers as the given array, but rearranged so that all the zeros are grouped at the start of the array. The order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the given array or make a new array.
+
+   * zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
+   * zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
+   * zeroFront([1, 0]) → [0, 1]
+
+    -----
+    def zeroFront(nums):
+    =====
+        zero_idx = 0 
+    =====
+        for i in range(len(nums)):
+    =====
+            if nums[i] == 0:
+    =====
+               tmp = nums[i]
+    =====
+               nums[i] = nums[zero_idx]
+    =====
+               nums[zero_idx] = tmp
+    =====
+               zero_idx += 1
+    =====
+        return nums
+          
+.. parsonsprob:: p3dnd-zero-front-wd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Return an array that contains the exact same numbers as the given array, but rearranged so that all the zeros are grouped at the start of the array. The order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0 ,0, 1, 1}. You may modify and return the given array or make a new array.
+
+   * zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
+   * zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
+   * zeroFront([1, 0]) → [0, 1]
+
+    -----
+    def zeroFront(nums):
+    =====
+        zero_idx = 0 
+    =====
+        for i in range(len(nums)):
+    =====
+        for i in nums: #paired: need to iterate over the length of the array not the array itself
+    =====
+            if nums[i] == 0:
+    =====
+            if nums[i] != 0: #paired: need to check if the number is not zero
+    =====
+               tmp = nums[i]
+    =====
+               nums[i] = nums[zero_idx]
+    =====
+               nums[zero_idx] = tmp
+    =====
+               zero_idx += 1
+    =====
+               zero_idx + 1 #paired: need to set the zero_idx variable when incrementing
+    =====
+        return nums
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
