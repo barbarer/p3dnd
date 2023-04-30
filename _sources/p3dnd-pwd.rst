@@ -33,6 +33,34 @@ Problems
    :fromid: p3dnd-total-eight-nine-wd
    :points: 10
 
+.. selectquestion:: p3dnd-max-block-wd-sq
+   :fromid: p3dnd-max-block-wd
+   :points: 10
+
+.. selectquestion:: p3dnd-zero-front-wd-sq
+   :fromid: p3dnd-zero-front-wd
+   :points: 10
+
+.. selectquestion:: p3dnd-sum-digits-wd-sq
+   :fromid: p3dnd-sum-digits-wd
+   :points: 10
+
+.. selectquestion:: p3dnd-two-two-wd-sq
+   :fromid: p3dnd-two-two-wd
+   :points: 10
+
+.. selectquestion:: p3dnd-bob-there-wd-sq
+   :fromid: p3dnd-bob-there-wd
+   :points: 10
+
+.. selectquestion:: p3dwd-two-sum-wd-sq
+   :fromid: p3dwd-two-sum-wd
+   :points: 10
+
+.. selectquestion:: p3dwd-paliwdrome-number-wd-sq
+   :fromid: p3dwd-paliwdrome-number-wd
+   :points: 10
+
 Feedback
 ==================================
 
