@@ -323,7 +323,8 @@ Problems
    :adaptive:
    :noindent:
 
-   Create the ``total89(nums)`` function below that takes a list and returns 
+   Create the ``total89(nums)`` function below that takes a list of 
+   numbers, ``nums``, and returns 
    the total of the items in ``nums`` except for all the numbers 
    between an 8 and a 9 (inclusive). For example, total89([1,2]) 
    should return 3 and total89([2, 8, 3, 9, 2]) should return 4.
@@ -362,14 +363,15 @@ Problems
    :adaptive:
    :noindent:
 
-   Given a string, return the sum of the digits 0-9 that appear in the string,
+   Create the ``sumDigits(str)`` function to return the sum of the digits 0-9 
+   that appear in the string, ``str``,
    ignoring all other characters. Return 0 if there are no digits in the
    string. (Note: Character.isDigit(char) tests if a char is one of the chars
    '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
 
-   sumDigits("aa1bc2d3") → 6
-   sumDigits("aa11b33") → 8
-   sumDigits("Chocolate") → 0
+   * sumDigits("aa1bc2d3") → 6
+   * sumDigits("aa11b33") → 8
+   * sumDigits("Chocolate") → 0
    -----
    def sumDigits(string):
    =====
@@ -391,7 +393,8 @@ Problems
    :adaptive:
    :noindent:
 
-   Given a string, return the sum of the digits 0-9 that appear in the string,
+   Create the ``sumDigits(str)`` function to return the sum of the digits 0-9 
+   that appear in the string, ``str``,
    ignoring all other characters. Return 0 if there are no digits in the
    string. (Note: Character.isDigit(char) tests if a char is one of the chars
    '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
@@ -423,7 +426,8 @@ Problems
    :adaptive:
    :noindent:
 
-   Given a string, return the length of the largest "block" in the string. A
+   Create the function ``maxBlock(str)`` that takes a string, ``str``, and 
+   returns the length of the largest "block" in the string. A
    block is a run of adjacent chars that are the same.
 
    * maxBlock("hoopla") → 2
@@ -459,7 +463,8 @@ Problems
    :adaptive:
    :noindent:
 
-   Given a string, return the length of the largest "block" in the string. A
+   Create the function ``maxBlock(str)`` that takes a string, ``str``, and 
+   returns the length of the largest "block" in the string. A
    block is a run of adjacent chars that are the same.
 
    * maxBlock("hoopla") → 2
@@ -501,8 +506,9 @@ Problems
    :adaptive:
    :noindent:
 
-   Return an array that contains the exact same numbers as the given array, but
-   rearranged so that all the zeros are grouped at the start of the array. The
+   Create the function ``zeroFront(nums)`` that takes a list of numbers, ``nums``
+   and returns a list with the exact same numbers as ``nums``, but
+   rearranged so that all of the zeros are grouped at the start of the array. The
    order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0
    ,0, 1, 1}. You may modify and return the given array or make a new array.
 
@@ -533,8 +539,9 @@ Problems
    :adaptive:
    :noindent:
 
-   Return an array that contains the exact same numbers as the given array, but
-   rearranged so that all the zeros are grouped at the start of the array. The
+   Create the function ``zeroFront(nums)`` that takes a list of numbers, ``nums``
+   and returns a list with the exact same numbers as ``nums``, but
+   rearranged so that all of the zeros are grouped at the start of the array. The
    order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0
    ,0, 1, 1}. You may modify and return the given array or make a new array.
 
@@ -572,7 +579,8 @@ Problems
    :adaptive:
    :noindent:
 
-   Given an array of ints, return true if every 2 that appears in the array is
+   Create the function ``twoTwo(nums)`` that takes a list of integers, ``nums`` and 
+   return true if every 2 that appears in the list is
    next to another 2.
 
    * twoTwo([4, 2, 2, 3]) → true
@@ -604,7 +612,9 @@ Problems
    :adaptive:
    :noindent:
 
-   Given an array of ints, return true if every 2 that appears in the array is next to another 2.
+   Create the function ``twoTwo(nums)`` that takes a list of integers, ``nums`` and 
+   return true if every 2 that appears in the list is
+   next to another 2.
 
    * twoTwo([4, 2, 2, 3]) → true
    * twoTwo([2, 2, 4]) → true
@@ -645,7 +655,8 @@ Problems
    :adaptive:
    :noindent:
 
-   Return true if the given string contains a "bob" string, but where the
+   Create a function, ``bobThere(str)`` to return true if the string, ``str``, contains 
+   a "bob" string, but where the
    middle 'o' char can be any char.
 
    * bobThere("abcbob") → true
@@ -667,7 +678,8 @@ Problems
    :adaptive:
    :noindent:
 
-   Return true if the given string contains a "bob" string, but where the
+   Create a function, ``bobThere(str)`` to return true if the string, ``str``, contains 
+   a "bob" string, but where the
    middle 'o' char can be any char.
 
    * bobThere("abcbob") → true
@@ -688,13 +700,14 @@ Problems
    =====
        return False
 
-.. parsonsprog:: p3dnd-two-sum-nd
+.. parsonsprob:: p3dnd-two-sum-nd
    :numbered: left
    :adaptive:
    :noindent:
 
-   Given an array of integers nums and an integer target, return indices of the
-   two numbers such that they add up to target. If no two numbers add up to
+   Create the function ``twoSum(nums, target)`` that takes a list of integers
+   ``nums`` and an integer ``target`` and returns indices of the
+   two numbers such that they add up to ``target``. If no two numbers add up to
    target, return an empty array.
 
    You may assume that each input would have exactly one solution, and you may
@@ -716,13 +729,14 @@ Problems
       return []
 
 
-.. parsonsprog:: p3dnd-two-sum-wd
+.. parsonsprob:: p3dnd-two-sum-wd
    :numbered: left
    :adaptive:
    :noindent:
 
-   Given an array of integers nums and an integer target, return indices of the
-   two numbers such that they add up to target. If no two numbers add up to
+   Create the function ``twoSum(nums, target)`` that takes a list of integers
+   ``nums`` and an integer ``target`` and returns indices of the
+   two numbers such that they add up to ``target``. If no two numbers add up to
    target, return an empty array.
 
    You may assume that each input would have exactly one solution, and you may
@@ -749,12 +763,13 @@ Problems
 
 
 
-.. parsonsprog:: p3dnd-palindrome-number-nd
+.. parsonsprob:: p3dnd-palindrome-number-nd
    :numbered: left
    :adaptive:
    :noindent:
 
-   Given an integer x, return true if x is a palindrome , and false otherwise.
+   Create a function ``isPalindrome(x)`` that takes an integer, ``x``, and returns 
+   ``True`` if x is a palindrome , and ``Fasle`` otherwise.
 
    For example, 121 is a palindrome, as well as 888. 678 is not a palindrome.
    Additionally, negative numbers cannot be palindromes.
