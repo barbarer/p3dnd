@@ -53,18 +53,18 @@ Problems
    :fromid: p3dnd-bob-there-wd
    :points: 10
 
-.. selectquestion:: p3dwd-two-sum-wd-sq
-   :fromid: p3dwd-two-sum-wd
+.. selectquestion:: p3dnd-two-sum-wd-sq
+   :fromid: p3dnd-two-sum-wd
    :points: 10
 
-.. selectquestion:: p3dwd-paliwdrome-number-wd-sq
-   :fromid: p3dwd-paliwdrome-number-wd
+.. selectquestion:: p3dnd-palindrome-number-wd-sq
+   :fromid: p3dnd-palindrome-number-wd
    :points: 10
 
 Feedback
 ==================================
 
-.. shortanswer:: p3dnd-parsons-sa
+.. shortanswer:: p3dnd-wd-parsons-sa
 
    Please provide feedback here. Please share any comments, problems, or suggestions.
 

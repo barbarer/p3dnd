@@ -761,9 +761,34 @@ Problems
    =====
       return []
 
-
-
 .. parsonsprob:: p3dnd-palindrome-number-nd
+   :numbered: left
+   :adaptive:
+   :noindent:
+
+   Create a function ``isPalindrome(x)`` that takes an integer, ``x``, and returns 
+   ``True`` if x is a palindrome , and ``Fasle`` otherwise.
+
+   For example, 121 is a palindrome, as well as 888. 678 is not a palindrome.
+   Additionally, negative numbers cannot be palindromes.
+   -----
+   def isPalindrome(x):
+   =====
+      left = 0
+      right = len(string) - 1
+   =====
+      while left < right:
+   =====
+         if string[left] != string[right]:
+   =====
+              return False
+   =====
+        left += 1
+        right -= 1
+   =====
+      return True
+
+.. parsonsprob:: p3dnd-palindrome-number-wd
    :numbered: left
    :adaptive:
    :noindent:
