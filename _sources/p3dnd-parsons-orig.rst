@@ -12,17 +12,34 @@ Problems
 .. parsonsprob:: p3dnd-front-back-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``front_back(str, start, end)``.
-   If ``str`` contains ``"start"`` at the beginning of the string return ``"start"``.
-   if ``str`` contains ``"end"`` at the end of the string return ``"end"``.
-   If ``str`` contains ``"start"`` at the begining and ``"end"`` at the end then return  ``"start_end"``.  
-   In all other cases return ``str``.
-   For example, ``front_back("Opening time", "Open", "noon")`` returns ``"start"`` and
-   ``front_back("Afternoon", "Open", "noon")`` returns ``"end"`` and
-   ``front_back("Open at noon", "Open", "noon")`` returns ``"start_end"`` and
-   ``front_back("Closed", "Open", "noon")`` returns ``"Closed"``.
+   Create the function ``front_back(str, start, end)`` that takes three strings and returns 
+   a string based on the following conditions.
+
+   * If ``str`` contains ``start`` at the beginning of the string return ``"s"``.
+   * if ``str`` contains ``end`` at the end of the string return ``"e"``.
+   * If ``str`` contains ``start`` at the begining and ``end`` at the end then return  ``"s_e"``.  
+   * Otherwise return ``"n"``.
+  
+   .. table:: 
+      :name: p3dnd-front-back-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------------------------+-----------------+
+      | Example Input                                      | Expected Output |
+      +====================================================+=================+
+      | ``front_back("Opening time", "Open", "noon")``     | ``"s"``         |
+      +----------------------------------------------------+-----------------+
+      | ``front_back("Afternoon", "Open", "noon")``        | ``"e"``         |
+      +----------------------------------------------------+-----------------+
+      | ``front_back("Open at noon", "Open", "noon")``     | ``"s_e"``       |
+      +----------------------------------------------------+-----------------+
+      | ``front_back("Closed", "Open", "noon")``           | ``"n"``         |
+      +----------------------------------------------------+-----------------+
+      | ``front_back("It is noon now", "open", "noon")``   | ``"n"``         |
+      +----------------------------------------------------+-----------------+
    -----
    def front_back(str, start, end):
    =====
@@ -30,32 +47,50 @@ Problems
    =====
        if str.startswith(start) and str[last:] == end:
    =====
-           return "start_end"
+           return "s_e"
    =====
        elif str.startswith(start):
    =====
-           return "start"
+           return "s"
    =====
        elif str[last:] == end:
    =====
-           return "end" 
+           return "e" 
    =====
-       return str
+       return "n"
 
 .. parsonsprob:: p3dnd-front-back-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``front_back(str, start, end)``.
-   If ``str`` contains ``"start"`` at the beginning of the string return ``"start"``.
-   if ``str`` contains ``"end"`` at the end of the string return ``"end"``.
-   If ``str`` contains ``"start"`` at the begining and ``"end"`` at the end then return  ``"start_end"``.  
-   In all other cases return ``str``.
-   For example, ``front_back("Opening time", "Open", "noon")`` returns ``"start"`` and
-   ``front_back("Afternoon", "Open", "noon")`` returns ``"end"`` and
-   ``front_back("Open at noon", "Open", "noon")`` returns ``"start_end"`` and
-   ``front_back("Closed", "Open", "noon")`` returns ``"Closed"``.
+   Create the function ``front_back(str, start, end)`` that takes three strings and returns 
+   a string based on the following conditions.
+
+   * If ``str`` contains ``start`` at the beginning of the string return ``"s"``.
+   * if ``str`` contains ``end`` at the end of the string return ``"e"``.
+   * If ``str`` contains ``start`` at the begining and ``end`` at the end then return  ``"s_e"``.  
+   * Otherwise return ``"n"``.
+  
+   .. table:: 
+      :name: p3dnd-front-back-wd-table
+      :widths: 70 30
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------------------------+-----------------+
+      | Example Input                                      | Expected Output |
+      +====================================================+=================+
+      | ``front_back("Opening time", "Open", "noon")``     | ``"s"``         |
+      +----------------------------------------------------+-----------------+
+      | ``front_back("Afternoon", "Open", "noon")``        | ``"e"``         |
+      +----------------------------------------------------+-----------------+
+      | ``front_back("Open at noon", "Open", "noon")``     | ``"s_e"``       |
+      +----------------------------------------------------+-----------------+
+      | ``front_back("Closed", "Open", "noon")``           | ``"n"``         |
+      +----------------------------------------------------+-----------------+
+      | ``front_back("It is noon now", "open", "noon")``   | ``"n"``         |
+      +----------------------------------------------------+-----------------+
    -----
    def front_back(str, start, end):
    =====
@@ -65,37 +100,55 @@ Problems
    =====
        if str.startswith(start) and str[last:] == end:
    =====
-           return "start_end"
+           return "s_e"
    =====
        elif str.startswith(start):
    =====
        elif str.starts(start): #paired: use startswith
    =====
-           return "start"
+           return "s"
    =====
        elif str[last:] == end:
    =====
        elif str[last] == end: #paired: use last: to get from last index to end
    =====
-           return "end" 
+           return "e" 
    =====
-       return str
+       return "n"
 
 
 .. parsonsprob:: p3dnd-in-back-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``in_back(str, in, end)``.
-   If ``str`` contains ``"in"`` return ``"in"``.
-   if ``str`` contains ``"end"`` at the end of the string return ``"end"``.
-   If ``str`` contains ``"in"`` and ``"end"`` at the end then return  ``"in_end"``.  
-   In all other cases return ``str``.
-   For example, ``in_back("We open on time", "open", "noon")`` returns ``"in"`` and
-   ``in_back("Close at noon", "open", "noon")`` returns ``"end"`` and
-   ``in_back("We open at noon", "open", "noon")`` returns ``"in_end"`` and
-   ``in_back("Closed", "open", "noon")`` returns ``"Closed"``.
+   Create the function ``in_back(str, in, end)`` that takes three strings and returns 
+   a string based on the following conditions.
+
+   * If ``str`` contains ``in`` return ``"i"``.
+   * if ``str`` contains ``end`` at the end of the string return ``"e"``.
+   * If ``str`` contains ``in`` and ``end`` at the end then return  ``"i_e"``.  
+   * Otherwise return ``"n"``.
+
+   .. table:: 
+      :name: p3dnd-in-back-nd
+      :widths: 70 30
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +--------------------------------------------------+-----------------+
+      | Example Input                                    | Expected Output |
+      +==================================================+=================+
+      |``in_back("We open on time", "open", "noon")``    | ``"i"``         |
+      +--------------------------------------------------+-----------------+
+      | ``in_back("Close at noon", "open", "noon")``     | ``"e"``         |
+      +--------------------------------------------------+-----------------+
+      | ``in_back("We open at noon", "open", "noon")``   | ``"i_e"``       |
+      +--------------------------------------------------+-----------------+
+      | ``in_back("Closed", "open", "noon")``            | ``"n"``         |
+      +--------------------------------------------------+-----------------+
+      | ``in_back("It is noon now", "open", "noon")``    | ``"n"``         |
+      +--------------------------------------------------+-----------------+
    -----
    def in_back(str, in, end):
    =====
@@ -103,32 +156,51 @@ Problems
    =====
        if str.contains(in) and str[last:] == end:
    =====
-           return "in_end"
+           return "i_e"
    =====
        elif str.contains(in):
    =====
-           return "in"
+           return "i"
    =====
        elif str[last:] == end:
    =====
-           return "end" 
+           return "e" 
    =====
-       return str
+       return "n"
 
 .. parsonsprob:: p3dnd-in-back-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``in_back(str, in, end)``.
-   If ``str`` contains ``"in"`` return ``"in"``.
-   if ``str`` contains ``"end"`` at the end of the string return ``"end"``.
-   If ``str`` contains ``"in"`` and ``"end"`` at the end then return  ``"in_end"``.  
-   In all other cases return ``str``.
-   For example, ``in_back("We open on time", "open", "noon")`` returns ``"in"`` and
-   ``in_back("Close at noon", "open", "noon")`` returns ``"end"`` and
-   ``in_back("We open at noon", "open", "noon")`` returns ``"in_end"`` and
-   ``in_back("Closed", "open", "noon")`` returns ``"Closed"``.
+   Create the function ``in_back(str, in, end)`` that takes three strings and returns 
+   a string based on the following conditions.
+
+   * If ``str`` contains ``in`` return ``"i"``.
+   * if ``str`` contains ``end`` at the end of the string return ``"e"``.
+   * If ``str`` contains ``in`` and ``"end"`` at the end then return  ``"i_e"``.  
+   * Otherwise return ``"n"``.
+
+   .. table:: 
+      :name: p3dnd-in-back-wd
+      :widths: 70 30
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +--------------------------------------------------+-----------------+
+      | Example Input                                    | Expected Output |
+      +==================================================+=================+
+      |``in_back("We open on time", "open", "noon")``    | ``"i"``         |
+      +--------------------------------------------------+-----------------+
+      | ``in_back("Close at noon", "open", "noon")``     | ``"e"``         |
+      +--------------------------------------------------+-----------------+
+      | ``in_back("We open at noon", "open", "noon")``   | ``"i_e"``       |
+      +--------------------------------------------------+-----------------+
+      | ``in_back("Closed", "open", "noon")``            | ``"n"``         |
+      +--------------------------------------------------+-----------------+
+      | ``in_back("It is noon now", "open", "noon")``    | ``"n"``         |
+      +--------------------------------------------------+-----------------+
+       
    -----
    def in_back(str, in, end):
    =====
@@ -140,34 +212,48 @@ Problems
    =====
        if str.contains(in) and str[last] == end: #paired: use last: to get from last to the end
    =====
-           return "in_end"
+           return "i_e"
    =====
        elif str.contains(in):
    =====
        elif str.has(in): #paired: use contains or find
    =====
-           return "in"
+           return "i"
    =====
        elif str[last:] == end:
    =====
-           return "end" 
+           return "e" 
    =====
-       return str
+       return "n"
 
 
 .. parsonsprob:: p3dnd-three-four-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``three_four(nums)``.
-   Return a new list with the same numbers in ``nums`` except
-   replace numbers that are multiples of three with ``"three"``
-   and multiples of four with ``"four"`` and 
-   multiples of both three and four with ``"three_four"``.
-   For example ``three-four([2, 3])`` returns ``[2, "three"]``
-   and ``three-four([2, 8])`` returns ``[2, "four"]`` and
-   ``three-four([6, 4, 5, 12])`` returns ``["three", "four", 5 "three_four"]``.
+   Create the function ``three_four(nums)`` that takes a list of numbers, ``nums``.
+   Return a new list with the same numbers in ``nums`` except 
+   with the following changes.
+
+   * replace numbers that are multiples of three with ``"three"``
+   * replace numbers that are multiples of four with ``"four"`` and 
+   * replace numbers that are multiples of both three and four with ``"three_four"``.
+
+   .. table:: 
+      :name: p3dnd-three-four-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``three-four([2, 3])``            | ``[2, "three"]``                      |
+      +----------------------------------+---------------------------------------+
+      | ``three-four([2, 8])``           | ``[2, "four"]``                       |
+      +----------------------------------+---------------------------------------+
+      | ``three-four([6, 4, 5, 12])``    | ``["three", "four", 5 "three_four"]`` |
+      +----------------------------------+---------------------------------------+
    -----
    def three_four(nums):
    =====
@@ -200,16 +286,31 @@ Problems
 .. parsonsprob:: p3dnd-three-four-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``three_four(nums)``.
-   Return a new list with the same numbers in ``nums`` except
-   replace numbers that are multiples of three with ``"three"``
-   and multiples of four with ``"four"`` and 
-   multiples of both three and four with ``"three_four"``.
-   For example ``three-four([2, 3])`` returns ``[2, "three"]``
-   and ``three-four([2, 8])`` returns ``[2, "four"]`` and
-   ``three-four([6, 4, 5, 12])`` returns ``["three", "four", 5 "three_four"]``.
+   Create the function ``three_four(nums)`` that takes a list of numbers, ``nums``.
+   Return a new list with the same numbers in ``nums`` except 
+   with the following changes.
+
+   * replace numbers that are multiples of three with ``"three"``
+   * replace numbers that are multiples of four with ``"four"`` and 
+   * replace numbers that are multiples of both three and four with ``"three_four"``.
+
+   .. table:: 
+      :name: p3dnd-three-four-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``three-four([2, 3])``            | ``[2, "three"]``                      |
+      +----------------------------------+---------------------------------------+
+      | ``three-four([2, 8])``           | ``[2, "four"]``                       |
+      +----------------------------------+---------------------------------------+
+      | ``three-four([6, 4, 5, 12])``    | ``["three", "four", 5 "three_four"]`` |
+      +----------------------------------+---------------------------------------+
+ 
    -----
    def three_four(nums):
    =====
@@ -238,11 +339,29 @@ Problems
 .. parsonsprob:: p3dnd-is-level-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``is_level(nums, value)`` that returns ``False``
-   if any adjacent values in ``nums`` differ by more than ``value``.  For 
-   example, ``is_level([1, 4, 5],2)`` returns ``False`` and ``is_level([1, 3, 5],2)`` returns ``True``.
+   Create the function ``is_level(nums, value)`` that takes a list of numbers, ``nums``, and a number ``value``.
+   
+   * It should return ``False`` if any adjacent numbers in ``nums`` differ by more than ``value`` 
+   * Otherwise it should return ``True``
+
+   .. table:: 
+      :name: p3dnd-is-level-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``is_level([1, 4, 5], 2)``        | ``False``                             |
+      +----------------------------------+---------------------------------------+
+      |``is_level([9, 4, 6], 3)``        | ``False``                             |
+      +----------------------------------+---------------------------------------+
+      |``is_level([1, 3, 5], 2)``        | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``is_level([5, 2, 4], 3)``        | ``True``                              |
+      +----------------------------------+---------------------------------------+
    -----
    def is_level(nums, value):
    =====
@@ -260,11 +379,29 @@ Problems
 .. parsonsprob:: p3dnd-is-level-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``is_level(nums, value)`` that returns ``False``
-   if any adjacent values in ``nums`` differ by more than ``value``.  For 
-   example, ``is_level([1, 4, 5],2)`` returns ``False`` and ``is_level([1, 3, 5],2)`` returns ``True``.
+   Create the function ``is_level(nums, value)`` that takes a list of numbers, ``nums``, and a number ``value``.
+   
+   * It should return ``False`` if any adjacent numbers in ``nums`` differ by more than ``value`` 
+   * Otherwise it should return ``True``
+
+   .. table:: 
+      :name: p3dnd-is-level-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``is_level([1, 4, 5], 2)``        | ``False``                             |
+      +----------------------------------+---------------------------------------+
+      |``is_level([9, 4, 6], 3)``        | ``False``                             |
+      +----------------------------------+---------------------------------------+
+      |``is_level([1, 3, 5], 2)``        | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``is_level([5, 2, 4], 3)``        | ``True``                              |
+      +----------------------------------+---------------------------------------+
    -----
    def is_level(nums, value):
    =====
@@ -286,12 +423,24 @@ Problems
 .. parsonsprob:: p3dnd-total-eight-nine-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the ``total89(nums)`` function below that takes a list and returns 
-   the total of the items in ``nums`` except for all the numbers 
-   between an 8 and a 9 (inclusive). For example, total89([1,2]) 
-   should return 3 and total89([2, 8, 3, 9, 2]) should return 4.
+   Create the ``total89(nums)`` function below that takes a list of numbers, 
+   ``nums``, and returns the total of the numbers in ``nums`` except for all numbers 
+   between an 8 and a 9 (inclusive). 
+
+   .. table:: 
+      :name: p3dnd-total-eight-nine-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``total89([1,2])``                | ``3``                                 |
+      +----------------------------------+---------------------------------------+
+      |``total89([2, 8, 3, 9, 2])``      | ``4``                                 |
+      +----------------------------------+---------------------------------------+
    -----
    def total89(nums):
    =====
@@ -321,13 +470,24 @@ Problems
 .. parsonsprob:: p3dnd-total-eight-nine-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the ``total89(nums)`` function below that takes a list of 
-   numbers, ``nums``, and returns 
-   the total of the items in ``nums`` except for all the numbers 
-   between an 8 and a 9 (inclusive). For example, total89([1,2]) 
-   should return 3 and total89([2, 8, 3, 9, 2]) should return 4.
+   Create the ``total89(nums)`` function below that takes a list of numbers, 
+   ``nums``, and returns the total of the numbers in ``nums`` except for all numbers 
+   between an 8 and a 9 (inclusive). 
+
+   .. table:: 
+      :name: p3dnd-total-eight-nine-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``total89([1,2])``                | ``3``                                 |
+      +----------------------------------+---------------------------------------+
+      |``total89([2, 8, 3, 9, 2])``      | ``4``                                 |
+      +----------------------------------+---------------------------------------+
    -----
    def total89(nums):
    =====
@@ -361,17 +521,27 @@ Problems
 .. parsonsprob:: p3dnd-sum-digits-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the ``sumDigits(str)`` function to return the sum of the digits 0-9 
-   that appear in the string, ``str``,
-   ignoring all other characters. Return 0 if there are no digits in the
-   string. (Note: Character.isDigit(char) tests if a char is one of the chars
-   '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+   Create the ``sumDigits(str)`` function that takes a string, ``str``, and returns a number based on the following conditions.
+   
+   * return the sum of the digits 0-9 ignoring all other characters
+   * return 0 if there are no digits in the string.
 
-   * sumDigits("aa1bc2d3") → 6
-   * sumDigits("aa11b33") → 8
-   * sumDigits("Chocolate") → 0
+   .. table:: 
+      :name: p3dnd-sum-digits-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``sumDigits("aa1bc2d3")``         | ``6``                                 |
+      +----------------------------------+---------------------------------------+
+      |``sumDigits("aa11b33")``          | ``8``                                 |
+      +----------------------------------+---------------------------------------+
+      |``sumDigits("Chocolate")``        | ``0``                                 |
+      +----------------------------------+---------------------------------------+
    -----
    def sumDigits(string):
    =====
@@ -391,17 +561,27 @@ Problems
 .. parsonsprob:: p3dnd-sum-digits-wd
    :numbered: left
    :adaptive:
-   :noindent:
+ 
+   Create the ``sumDigits(str)`` function that takes a string, ``str``, and returns a number based on the following conditions.
+   
+   * return the sum of the digits 0-9 ignoring all other characters
+   * return 0 if there are no digits in the string.
 
-   Create the ``sumDigits(str)`` function to return the sum of the digits 0-9 
-   that appear in the string, ``str``,
-   ignoring all other characters. Return 0 if there are no digits in the
-   string. (Note: Character.isDigit(char) tests if a char is one of the chars
-   '0', '1', .. '9'. Integer.parseInt(string) converts a string to an int.)
+   .. table:: 
+      :name: p3dnd-sum-digits-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
 
-   * sumDigits("aa1bc2d3") → 6
-   * sumDigits("aa11b33") → 8
-   * sumDigits("Chocolate") → 0
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``sumDigits("aa1bc2d3")``         | ``6``                                 |
+      +----------------------------------+---------------------------------------+
+      |``sumDigits("aa11b33")``          | ``8``                                 |
+      +----------------------------------+---------------------------------------+
+      |``sumDigits("Chocolate")``        | ``0``                                 |
+      +----------------------------------+---------------------------------------+
    -----
    def sumDigits(string):
    =====
@@ -424,15 +604,26 @@ Problems
 .. parsonsprob:: p3dnd-max-block-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
    Create the function ``maxBlock(str)`` that takes a string, ``str``, and 
    returns the length of the largest "block" in the string. A
    block is a run of adjacent chars that are the same.
 
-   * maxBlock("hoopla") → 2
-   * maxBlock("abbCCCddBBBxx") → 3
-   * maxBlock("") → 0
+   .. table:: 
+      :name: p3dnd-max-block-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``maxBlock("hoopla")``            | ``2``                                 |
+      +----------------------------------+---------------------------------------+
+      |``maxBlock("abbCCCCddBBBxx")``    | ``4``                                 |
+      +----------------------------------+---------------------------------------+
+      |``maxBlock("")``                  | ``0``                                 |
+      +----------------------------------+---------------------------------------+
    -----
    def maxBlock(string):
    =====
@@ -461,15 +652,26 @@ Problems
 .. parsonsprob:: p3dnd-max-block-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
    Create the function ``maxBlock(str)`` that takes a string, ``str``, and 
    returns the length of the largest "block" in the string. A
    block is a run of adjacent chars that are the same.
 
-   * maxBlock("hoopla") → 2
-   * maxBlock("abbCCCddBBBxx") → 3
-   * maxBlock("") → 0
+   .. table:: 
+      :name: p3dnd-max-block-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``maxBlock("hoopla")``            | ``2``                                 |
+      +----------------------------------+---------------------------------------+
+      |``maxBlock("abbCCCCddBBBxx")``    | ``4``                                 |
+      +----------------------------------+---------------------------------------+
+      |``maxBlock("")``                  | ``0``                                 |
+      +----------------------------------+---------------------------------------+
    -----
    def maxBlock(string):
    =====
@@ -504,17 +706,26 @@ Problems
 .. parsonsprob:: p3dnd-zero-front-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
    Create the function ``zeroFront(nums)`` that takes a list of numbers, ``nums``
-   and returns a list with the exact same numbers as ``nums``, but
-   rearranged so that all of the zeros are grouped at the start of the array. The
-   order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0
-   ,0, 1, 1}. You may modify and return the given array or make a new array.
+   and returns a list with the numbers
+   rearranged so that all of the zeros are grouped at the start of the list. 
 
-   * zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
-   * zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
-   * zeroFront([1, 0]) → [0, 1]
+   .. table:: 
+      :name: p3dnd-zero-front-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``zeroFront([1, 0, 0, 1])``       | ``[0, 0, 1, 1]``                      |          
+      +----------------------------------+---------------------------------------+
+      |``zeroFront([0, 1, 1, 0, 1])``    | ``[0, 0, 1, 1, 1]``                   |              
+      +----------------------------------+---------------------------------------+
+      |``zeroFront([1, 0])``             | ``[0, 1]``                            |
+      +----------------------------------+---------------------------------------+
    -----
    def zeroFront(nums):
    =====
@@ -537,17 +748,26 @@ Problems
 .. parsonsprob:: p3dnd-zero-front-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
    Create the function ``zeroFront(nums)`` that takes a list of numbers, ``nums``
-   and returns a list with the exact same numbers as ``nums``, but
-   rearranged so that all of the zeros are grouped at the start of the array. The
-   order of the non-zero numbers does not matter. So {1, 0, 0, 1} becomes {0
-   ,0, 1, 1}. You may modify and return the given array or make a new array.
+   and returns a list with the numbers
+   rearranged so that all of the zeros are grouped at the start of the list. 
 
-   * zeroFront([1, 0, 0, 1]) → [0, 0, 1, 1]
-   * zeroFront([0, 1, 1, 0, 1]) → [0, 0, 1, 1, 1]
-   * zeroFront([1, 0]) → [0, 1]
+   .. table:: 
+      :name: p3dnd-zero-front-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``zeroFront([1, 0, 0, 1])``       | ``[0, 0, 1, 1]``                      |          
+      +----------------------------------+---------------------------------------+
+      |``zeroFront([0, 1, 1, 0, 1])``    | ``[0, 0, 1, 1, 1]``                   |              
+      +----------------------------------+---------------------------------------+
+      |``zeroFront([1, 0])``             | ``[0, 1]``                            |
+      +----------------------------------+---------------------------------------+
    -----
    def zeroFront(nums):
    =====
@@ -577,15 +797,26 @@ Problems
 .. parsonsprob:: p3dnd-two-two-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``twoTwo(nums)`` that takes a list of integers, ``nums`` and 
-   return true if every 2 that appears in the list is
-   next to another 2.
+   Create the function ``twoTwo(nums)`` that takes a list of numbers, ``nums``
+   and returns true if every 2 that appears in the list is
+   next to another 2. Otherwise it returns ``False``.
 
-   * twoTwo([4, 2, 2, 3]) → true
-   * twoTwo([2, 2, 4]) → true
-   * twoTwo([2, 2, 4, 2]) → false
+   .. table:: 
+      :name: p3dnd-two-two-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``twoTwo([4, 2, 2, 3])``          | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``twoTwo([2, 2, 4])``             | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``twoTwo([2, 2, 4, 2])``          | ``False``                             |
+      +----------------------------------+---------------------------------------+
    -----
    def twoTwo(nums):
    =====
@@ -610,16 +841,26 @@ Problems
 .. parsonsprob:: p3dnd-two-two-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``twoTwo(nums)`` that takes a list of integers, ``nums`` and 
-   return true if every 2 that appears in the list is
-   next to another 2.
+   Create the function ``twoTwo(nums)`` that takes a list of numbers, ``nums``
+   and returns ``True`` if every 2 that appears in the list is
+   next to another 2. Otherwise it returns ``False``.
 
-   * twoTwo([4, 2, 2, 3]) → true
-   * twoTwo([2, 2, 4]) → true
-   * twoTwo([2, 2, 4, 2]) → false
+   .. table:: 
+      :name: p3dnd-two-two-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
 
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``twoTwo([4, 2, 2, 3])``          | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``twoTwo([2, 2, 4])``             | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``twoTwo([2, 2, 4, 2])``          | ``False``                             |
+      +----------------------------------+---------------------------------------+
    -----
    def twoTwo(nums):
    =====
@@ -653,15 +894,26 @@ Problems
 .. parsonsprob:: p3dnd-bob-there-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create a function, ``bobThere(str)`` to return true if the string, ``str``, contains 
+   Create a function, ``bobThere(str)`` that takes a string, ``str``. It returns ``True`` if ``str`` contains 
    a "bob" string, but where the
-   middle 'o' char can be any char.
+   middle 'o' char can be any char. Otherwise it returns ``False``.
 
-   * bobThere("abcbob") → true
-   * bobThere("b9b") → true
-   * bobThere("bac") → false
+   .. table:: 
+      :name: p3dnd-bob-there-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``bobThere("abcbob")``            | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``bobThere("b9b")``               | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``bobThere("bac")``               | ``False``                             |
+      +----------------------------------+---------------------------------------+
    -----
    def bobThere(str):
    =====
@@ -676,15 +928,26 @@ Problems
 .. parsonsprob:: p3dnd-bob-there-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create a function, ``bobThere(str)`` to return true if the string, ``str``, contains 
+   Create a function, ``bobThere(str)`` that takes a string, ``str``. It returns ``True`` if ``str`` contains 
    a "bob" string, but where the
-   middle 'o' char can be any char.
+   middle 'o' char can be any char. Otherwise it returns ``False``.
 
-   * bobThere("abcbob") → true
-   * bobThere("b9b") → true
-   * bobThere("bac") → false
+   .. table:: 
+      :name: p3dnd-bob-there-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``bobThere("abcbob")``            | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``bobThere("b9b")``               | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``bobThere("bac")``               | ``False``                             |
+      +----------------------------------+---------------------------------------+
    -----
    def bobThere(str):
    =====
@@ -703,18 +966,28 @@ Problems
 .. parsonsprob:: p3dnd-two-sum-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``twoSum(nums, target)`` that takes a list of integers
-   ``nums`` and an integer ``target`` and returns indices of the
+   Create a function ``twoSum(nums, target)`` that takes a list of integers
+   ``nums`` and an integer ``target`` and returns the indices of the
    two numbers such that they add up to ``target``. If no two numbers add up to
-   target, return an empty array.
+   ``target``, it returns an empty list. Assume that each input has exactly one 
+   solution, and you may not use the same element twice.
 
-   You may assume that each input would have exactly one solution, and you may
-   not use the same element twice.
+   .. table:: 
+      :name: p3dnd-two-sum-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
 
-   For example for nums=[2, 7, 11, 15] and target = 9 will return [0, 1] as
-   the numbers at index 0 and 1 add up to 9.
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``twoSum([2,7,11,15], 9)``        | ``[0, 1]``                            |
+      +----------------------------------+---------------------------------------+
+      |``twoSum([2,7,11,15], 13)``       | ``[0, 2]``                            |
+      +----------------------------------+---------------------------------------+
+      |``twoSum([2,7,11,15], 5)``        | ``[]``                                |
+      +----------------------------------+---------------------------------------+
    -----
    def twoSum(nums, target):
    =====
@@ -732,18 +1005,28 @@ Problems
 .. parsonsprob:: p3dnd-two-sum-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
-   Create the function ``twoSum(nums, target)`` that takes a list of integers
-   ``nums`` and an integer ``target`` and returns indices of the
+   Create a function ``twoSum(nums, target)`` that takes a list of integers
+   ``nums`` and an integer ``target`` and returns the indices of the
    two numbers such that they add up to ``target``. If no two numbers add up to
-   target, return an empty array.
+   ``target``, it returns an empty list. Assume that each input has exactly one 
+   solution, and you may not use the same element twice.
 
-   You may assume that each input would have exactly one solution, and you may
-   not use the same element twice.
+   .. table:: 
+      :name: p3dnd-two-sum-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
 
-   For example for nums=[2, 7, 11, 15] and target = 9 will return [0, 1] as
-   the numbers at index 0 and 1 add up to 9.
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``twoSum([2,7,11,15], 9)``        | ``[0, 1]``                            |
+      +----------------------------------+---------------------------------------+
+      |``twoSum([2,7,11,15], 13)``       | ``[0, 2]``                            |
+      +----------------------------------+---------------------------------------+
+      |``twoSum([2,7,11,15], 5)``        | ``[]``                                |
+      +----------------------------------+---------------------------------------+
    -----
    def twoSum(nums, target):
    =====
@@ -764,22 +1047,36 @@ Problems
 .. parsonsprob:: p3dnd-palindrome-number-nd
    :numbered: left
    :adaptive:
-   :noindent:
 
    Create a function ``isPalindrome(x)`` that takes an integer, ``x``, and returns 
-   ``True`` if x is a palindrome , and ``Fasle`` otherwise.
+   ``True`` if x is a palindrome , and ``False`` otherwise.  An integer is a palindrome 
+   if the digits are the same if read from left to right as from right to left.
 
-   For example, 121 is a palindrome, as well as 888. 678 is not a palindrome.
-   Additionally, negative numbers cannot be palindromes.
+   .. table:: 
+      :name: p3dnd-palindrome-number-nd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``isPalindrome(121)``             | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``isPalindrome(888)``             | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``isPalindrome(678)``             | ``[]``                                |
+      +----------------------------------+---------------------------------------+
    -----
    def isPalindrome(x):
    =====
+      strx = str(x)
       left = 0
-      right = len(string) - 1
+      right = len(strx) - 1
    =====
       while left < right:
    =====
-         if string[left] != string[right]:
+         if strx[left] != strx[right]:
    =====
               return False
    =====
@@ -791,25 +1088,39 @@ Problems
 .. parsonsprob:: p3dnd-palindrome-number-wd
    :numbered: left
    :adaptive:
-   :noindent:
 
    Create a function ``isPalindrome(x)`` that takes an integer, ``x``, and returns 
-   ``True`` if x is a palindrome , and ``Fasle`` otherwise.
+   ``True`` if x is a palindrome , and ``False`` otherwise.  An integer is a palindrome 
+   if the digits are the same if read from left to right as from right to left.
 
-   For example, 121 is a palindrome, as well as 888. 678 is not a palindrome.
-   Additionally, negative numbers cannot be palindromes.
+   .. table:: 
+      :name: p3dnd-palindrome-number-wd-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``isPalindrome(121)``             | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``isPalindrome(888)``             | ``True``                              |
+      +----------------------------------+---------------------------------------+
+      |``isPalindrome(678)``             | ``[]``                                |
+      +----------------------------------+---------------------------------------+
    -----
    def isPalindrome(x):
    =====
+      strx = str(x)
       left = 0
-      right = len(string) - 1
+      right = len(strx) - 1
    =====
       left = 0
-      right = len(string) #paired: right should be one less than the length of the string
+      right = len(strx) #paired: right should be one less than the length of the string
    ===== 
       while left < right:
    =====
-         if string[left] != string[right]:
+         if strx[left] != strx[right]:
    =====
               return False
    =====
