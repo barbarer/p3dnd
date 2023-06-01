@@ -1049,8 +1049,8 @@ Problems
    :adaptive:
 
    Create a function ``isPalindrome(x)`` that takes an integer, ``x``, and returns 
-   ``True`` if x is a palindrome , and ``False`` otherwise.  An integer is a palindrome 
-   if the digits are the same if read from left to right as from right to left.
+   ``True`` if x is a palindrome , and ``False`` otherwise.   An integer is a palindrome 
+   if the digits read the same backwards as forwards.
 
    .. table:: 
       :name: p3dnd-palindrome-number-nd-table
@@ -1091,7 +1091,7 @@ Problems
 
    Create a function ``isPalindrome(x)`` that takes an integer, ``x``, and returns 
    ``True`` if x is a palindrome , and ``False`` otherwise.  An integer is a palindrome 
-   if the digits are the same if read from left to right as from right to left.
+   if the digits read the same backwards as forwards.
 
    .. table:: 
       :name: p3dnd-palindrome-number-wd-table
