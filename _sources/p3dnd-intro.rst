@@ -199,7 +199,7 @@ What to do next
 
         if (cond == 'd') {
            a.href = "p3dnd-pwd.html"
-        } else if (cond == 'w') {
+        } else if (cond == 'nd') {
            a.href = "p3dnd-pnd.html"
         }
      };
