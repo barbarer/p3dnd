@@ -9,6 +9,183 @@ on it for about five minutes without solving it.
 Problems
 ==============
 
+.. parsonsprob:: p3dnd-has22_nd
+       :adaptive:
+       :numbered: left
+
+       Create a function ``has22(nums)`` that takes a list of numbers, ``nums`` 
+       and returns ``True`` if there are at least two items in the list that are adjacent and both equal to ``2``, otherwise return ``False``. 
+
+       .. table:: 
+          :name: p3dnd-has22_nd-table
+          :class: longtable
+          :align: left
+          :width: 80%
+
+          +----------------------------------------------------+-----------------+
+          | Example Input                                      | Expected Output |
+          +====================================================+=================+
+          | ``has22([1, 2, 2])``                               | ``True``        |
+          +----------------------------------------------------+-----------------+
+          | ``has22([2, 1, 2])``                               | ``False``       |
+          +----------------------------------------------------+-----------------+
+          | ``has22([2, 2, 8])``                               | ``True``        |
+          +----------------------------------------------------+-----------------+
+          | ``has22([3, 3, 5])``                               | ``False``       |
+          +----------------------------------------------------+-----------------+
+       -----
+       def has22(nums):
+       =====
+           for i in range(len(nums) - 1):
+       =====
+               if nums[i] == 2 and nums[i + 1] == 2:
+       =====
+                   return True
+       =====
+           return False
+
+.. parsonsprob:: p3dnd-has22_wd
+       :adaptive:
+       :numbered: left
+
+       Create a function ``has22(nums)`` that takes a list of numbers, ``nums`` 
+       and returns ``True`` if there are at least two items in the list that are adjacent and both equal to ``2``, otherwise return ``False``. 
+
+       .. table:: 
+          :name: p3dnd-has22-wd-table
+          :class: longtable
+          :align: left
+          :width: 80%
+
+          +----------------------------------------------------+-----------------+
+          | Example Input                                      | Expected Output |
+          +====================================================+=================+
+          | ``has22([1, 2, 2])``                               | ``True``        |
+          +----------------------------------------------------+-----------------+
+          | ``has22([2, 1, 2])``                               | ``False``       |
+          +----------------------------------------------------+-----------------+
+          | ``has22([2, 2, 8])``                               | ``True``        |
+          +----------------------------------------------------+-----------------+
+          | ``has22([3, 3, 5])``                               | ``False``       |
+          +----------------------------------------------------+-----------------+
+       -----
+       def has22(nums):
+       =====
+           for i in range(len(nums) - 1):
+       =====
+           for i in range(len(nums)): #paired: must stop before end to not go out of bounds if comparing current and next value
+       =====
+               if nums[i] == 2 and nums[i + 1] == 2:
+       =====
+               if nums[i] == nums[i+1]: #paired: must check if both equal 2 as well
+       =====
+                   return True
+       =====
+           return False
+
+.. parsonsprob:: p3dnd-sum13-nd
+   :adaptive:
+   :numbered: left
+
+   Create a function ``sum13(nums)`` that takes a list of numbers, ``nums`` and 
+   returns the sum of the numbers in the list. However, the number 13 is 
+   very unlucky, so do not add it or the number that comes immediately 
+   after a 13 to the sum.    Return ``0`` if ``nums`` is the empty list. 
+   
+    .. table:: 
+          :name: p3dnd-sum13-nd-table
+          :class: longtable
+          :align: left
+          :width: 80%
+
+          +----------------------------------------------------+-----------------+
+          | Example Input                                      | Expected Output |
+          +====================================================+=================+
+          | ``sum13([13,1,2])``                                | ``2``           |
+          +----------------------------------------------------+-----------------+
+          | ``sum13([1,13])``                                  | ``1``           |
+          +----------------------------------------------------+-----------------+
+          | ``sum13([4, 13, 8])``                              | ``4``           |
+          +----------------------------------------------------+-----------------+
+          | ``sum13([13, 1, 13, 3, 2])``                       | ``2``           |
+          +----------------------------------------------------+-----------------+ 
+   -----
+   def sum_13(nums):
+   =====
+       total = 0
+       found_13 = False
+   =====
+       for num in nums:
+   =====
+           if found_13:
+   =====
+               found_13 = False
+   =====
+           elif num == 13:
+   =====
+               found_13 = True
+   =====
+           else:
+   =====
+               total += num
+   =====
+       return total
+
+.. parsonsprob:: p3dnd-sum13-wd
+   :adaptive:
+   :numbered: left
+
+   Create a function ``sum13(nums)`` that takes a list of numbers, ``nums`` and 
+   returns the sum of the numbers in the list. However, the number 13 is 
+   very unlucky, so do not add it or the number that comes immediately 
+   after a 13 to the sum.    Return ``0`` if ``nums`` is the empty list. 
+   
+    .. table:: 
+          :name: p3dnd-sum13-wd-table
+          :class: longtable
+          :align: left
+          :width: 80%
+
+          +----------------------------------------------------+-----------------+
+          | Example Input                                      | Expected Output |
+          +====================================================+=================+
+          | ``sum13([13,1,2])``                                | ``2``           |
+          +----------------------------------------------------+-----------------+
+          | ``sum13([1,13])``                                  | ``1``           |
+          +----------------------------------------------------+-----------------+
+          | ``sum13([4, 13, 8])``                              | ``4``           |
+          +----------------------------------------------------+-----------------+
+          | ``sum13([13, 1, 13, 3, 2])``                       | ``2``           |
+          +----------------------------------------------------+-----------------+ 
+   -----
+   def sum_13(nums):
+   =====
+       total = 0
+       found_13 = False
+   =====
+       total = 0
+       found_13 = True #paired: You haven't found a 13 yet so this found_13 should be False
+   =====
+       for num in nums:
+   =====
+           if found_13:
+   =====
+               found_13 = False
+   =====
+           elif num == 13:
+   =====
+           elif num = 13: #paired: Use == and not = to test if a variable equals a value
+   =====
+               found_13 = True
+   =====
+           else:
+   =====
+               total += num
+   =====
+       return total
+   =====
+       return Total #paired: Case matters and Total is not defined
+
 .. parsonsprob:: p3dnd-front-back-nd
    :numbered: left
    :adaptive:

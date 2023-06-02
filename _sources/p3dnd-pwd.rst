@@ -18,7 +18,7 @@ Problems
    :points: 10
 
 .. selectquestion:: p3dnd-has22-parsons-wd-sq
-   :fromid: has22_Parsons-Version-B
+   :fromid: p3dnd-has22_wd
    :points: 10
 
 .. selectquestion:: p3dnd-is-level-wd-sq
@@ -26,7 +26,7 @@ Problems
    :points: 10
 
 .. selectquestion:: p3dnd-sum13-parsons-wd-sq
-   :fromid: sum13-Parsons-version-pilot
+   :fromid: p3dnd-sum13-wd
    :points: 10
 
 .. selectquestion:: p3dnd-total-eight-nine-wd-sq
