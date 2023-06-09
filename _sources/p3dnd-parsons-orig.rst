@@ -1309,11 +1309,202 @@ Problems
     =====
       return True
         
+.. activecode:: p3dnd_upper_center
+   :autograde: unittest
+   :nocodelens:
+
+   Write the function ``upper_center(str)`` to return the passed string ``str`` with the middle character(s) in uppercase.  
+
+   * If ``str`` has an odd length, uppercase the middle character. 
+   * If ``str`` has an even length, uppercase the middle two characters. 
+   * If ``str`` has less than 3 characters then return ``str``. 
+   
+   .. table:: 
+      :name: p3dnd_upper_center-table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``upper_center('abc')``           | ``'aBc'``                             |
+      +----------------------------------+---------------------------------------+
+      |``upper_center('abcd')``          | ``'aBCd'``                            |
+      +----------------------------------+---------------------------------------+
+      |``upper_center('a')``             | ``'a'``                               |
+      +----------------------------------+---------------------------------------+
+   ~~~~
+   def upper_center(str):
+
+   ====
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+       def testOne(self):
+           self.assertEqual(upper_center('abc'), 'aBc', "upper_center('abc')")
+           self.assertEqual(upper_center('abcd'), 'aBCd', "upper_center('abcd')")
+           self.assertEqual(upper_center('ab'), 'ab', "upper_center('ab')")
+           self.assertEqual(upper_center('a'), 'a', "upper_center('a')")
+           self.assertEqual(upper_center(''), '', "upper_center('')")
+           self.assertEqual(upper_center('abcdefg'), 'abcDefg', "upper_center('abcdefg')")
+           self.assertEqual(upper_center('abcdef'), 'abCDef', "upper_center('abcdef')")
+           self.assertEqual(upper_center('apple'), 'apPle', "get_middle('apple')")
+           self.assertEqual(upper_center('banana'), 'baNAna', "get_middle('banana')")
+          
+
+              
+   myTests().main()
+
+.. activecode:: p3dnd_is_descending_ac
+        :autograde: unittest
+        :nocodelens:
+
+        Write a function ``is_descending(nums)`` to do the following.
+        
+        * Return ``True`` if the  numbers in the list ``nums`` are sorted in descending order. 
+        * Otherwise return ``False``. 
+        * If the list ``nums`` has less than two numbers in it return ``True``.  
+        
+        .. table:: 
+           :name: p3dnd_is_ascending_ac-table
+           :class: longtable
+           :align: left
+           :width: 80%
+
+           +----------------------------------+---------------------------------------+
+           | Example Input                    | Expected Output                       |
+           +==================================+=======================================+
+           |``is_descending([2,3,4])``        | ``False``                             |
+           +----------------------------------+---------------------------------------+
+           |``is_descending([1])``            | ``True``                              |
+           +----------------------------------+---------------------------------------+
+           |``is_descending([4,3,2])``        | ``True``                              |
+           +----------------------------------+---------------------------------------+
+        ~~~~
+        def is_descending(nums):
+        #write your code here
 
 
 
+        print(is_descending([2, 3, 4]))
+        print(is_descending([3]))
+        print(is_descending([4, 3, 2]))
+
+        =====
+
+
+        from unittest.gui import TestCaseGui
+        class myTests(TestCaseGui):
+
+            def testOne(self):
+                self.assertEqual(is_descending([4,3,2]),True,"is_descending([4,3,2])")
+                self.assertEqual(is_descending([2,3,4]),False,"is_descending([2,3,4])")
+                self.assertEqual(is_descending([4,1,2]),False,"is_descending([4,1,2])")
+                self.assertEqual(is_descending([4,3,1,2]),False,"is_descending([4,3,1,2])")
+                self.assertEqual(is_descending([4,3,2,6]),False,"is_descending([4,3,2,6])")
+                self.assertEqual(is_descending([1,4,3,2]),False,"is_descending(1,4,3,2])")
+                self.assertEqual(is_descending([4,1,3,2]),False,"is_descending(4,1,3,2])")
+                self.assertEqual(is_descending([5,4,3,2]),True,"is_descending([5,4,3,2])")
+                self.assertEqual(is_descending([3,2,1,-1]),True,"is_descending([3,2,1,-1])")
+                self.assertEqual(is_descending([1]),True,"is_descending([1])")
+
+
+        myTests().main()
+
+
+
+.. activecode:: p3dnd_sum67_fix
+   :autograde: unittest
+
+   Fix the ``sum67`` function below that takes a list of numbers and 
+   returns the total of the numbers in the list except for all the 
+   numbers whose position is between a 6 and 7 in the list (inclusive). 
+
+   .. table:: 
+      :name: p3dnd_sum67_fix_table
+      :class: longtable
+      :align: left
+      :width: 80%
+
+      +----------------------------------+---------------------------------------+
+      | Example Input                    | Expected Output                       |
+      +==================================+=======================================+
+      |``sum67([1,2])``                  | ``3``                                 |
+      +----------------------------------+---------------------------------------+
+      |``sum67([2, 6, 8, 7, 2])``        | ``4``                                 |
+      +----------------------------------+---------------------------------------+ 
+      |``sum67([3, 6, 7])``              | ``3``                                 |
+      +----------------------------------+---------------------------------------+ 
+   ~~~~
+   def sum67(nums):
+       total = 0               # initialize the total
+       found_6 = True          # initialize a Boolean flag
+       for num in nums:        # loop through the items in a list
+           if found_6 && num == 7:
+               found_6 = False # set the Boolean flag to false
+           elif num = 6:
+               found_6 = True  # set the Boolean flag to True
+           elif found_6:
+               continue        # go back to the top of the loop
+           else:
+               total += num    # add num to total
+           return total        # return the total
+
+   ====
+   from unittest.gui import TestCaseGui
+
+   class myTests(TestCaseGui):
+
+       def testOne(self):
+           self.assertEqual(sum67([1,2]), 3, 'sum67([1,2])')
+           self.assertEqual(sum67([2, 6, 8, 7, 2]), 4, 'sum67([2, 6, 8, 7, 2])')
+           self.assertEqual(sum67([6, 2, 7]), 0, 'sum67([6, 2, 7])')
+           self.assertEqual(sum67([6, 2, 7, 5]), 5, 'sum67([6, 2, 7, 5])')
+           self.assertEqual(sum67([7, 2, 6]), 9, 'sum67([7, 2, 6])')
+           self.assertEqual(sum67([3, 6, 7]), 3, 'sum67([3, 6, 7])')
+           self.assertEqual(sum67([]), 0, 'sum67([])')
+
+   myTests().main()
       
 
+.. activecode:: p3dnd_lst_two_loop_post
+    :autograde: unittest
+        
+    Write a function ``join(cities, years)`` that takes 
+    in two lists, ``cities`` and ``years`` and returns a list of strings in the format ``"City: city, year: year"``. 
+
+    .. table:: 
+       :name: p3dnd_lst_two_loop_post_table
+       :class: longtable
+       :align: left
+       :width: 80%
+
+       +-----------------------------------------+---------------------------------------------------------+
+       | Example Input                           | Expected Output                                         |
+       +=========================================+=========================================================+
+       |``join(["Paris", "London"],[24, 12])``   | ``["City: Paris, year: 24", "City: London, year: 12"]`` |                               
+       +-----------------------------------------+---------------------------------------------------------+
+       |``join(["Berlin"][20])``                 | ``["City: Berlin, year: 20"]``                          |                               
+       +-----------------------------------------+---------------------------------------------------------+
+    ~~~~
+    def join(cities, years):
+        
+    ====
+
+    from unittest.gui import TestCaseGui
+
+    class myTests(TestCaseGui):
+
+        def testOne(self):
+              self.assertEqual(join(["Rio", "Beijing", "London"], [2016, 2008, 2012]), ["City: Rio, year: 2016", "City: Beijing, year: 2008", "City: London, year: 2012"], 'join(["Rio", "Beijing", "London"])')
+              self.assertEqual(join(["Rio"], [2016]), ["City: Rio, year: 2016"], 'join(["Rio"], [2016])')
+              self.assertEqual(join(["London", "Paris"], [2012, 2024]), ["City: London, year: 2012", "City: Paris, year: 2024"], 'join(["London", "Paris"], [2012, 2024])')
+              self.assertEqual(join(["Sydney", "London"], [2000, 2012]), ["City: Sydney, year: 2000", "City: London, year: 2012"], 'join(["Sydney", "London"], [2000, 2012])')
+
+
+    myTests().main()
 
 
 

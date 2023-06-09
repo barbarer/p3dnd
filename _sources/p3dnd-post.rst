@@ -9,20 +9,20 @@ on it for about five minutes without solving it.
 Problems
 ==============
 
-.. selectquestion:: iwgex1-p3dnd-post-upper_center-ac
-   :fromid: upper_center
+.. selectquestion:: p3dnd_upper_center_sq
+   :fromid: p3dnd_upper_center
    :points: 10
 
-.. selectquestion:: iwgex1-p3dnd-post-is-descending
-   :fromid: prestest_is_ascending_ac-post
+.. selectquestion:: p3dnd_is_descending_ac_sq
+   :fromid: p3dnd_is_descending_ac
    :points: 10
 
-.. selectquestion:: iwgex1-p3dnd-post-sum67-v2
-   :fromid: sum67_fix
+.. selectquestion:: p3dnd_sum67_fix_sq
+   :fromid: p3dnd_sum67_fix
    :points: 10
 
 .. selectquestion:: iwgex1-p3dnd-lst_two_loop_post
-   :fromid: lst_two_loop_post
+   :fromid: p3dnd_lst_two_loop_post
    :points: 10
 
 Feedback
