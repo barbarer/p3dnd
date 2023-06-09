@@ -9,7 +9,7 @@ on it for about five minutes without solving it.
 Problems
 ==============
 
-.. selectquestion:: p3dnd-front-back-nd-sq
+.. selectquestion:: p3dnd-front-back-nd-sq-1
    :fromid: p3dnd-front-back-nd
    :points: 10
 
@@ -17,47 +17,47 @@ Problems
    :fromid: p3dnd-in-back-nd
    :points: 10
 
-.. selectquestion:: p3dnd-has22-parsons-nd-sq
+.. selectquestion:: p3dnd-has22-parsons-nd-sq-1
    :fromid: p3dnd-has22_nd
    :points: 10
 
-.. selectquestion:: p3dnd-is-level-nd-sq
+.. selectquestion:: p3dnd-is-level-nd-sq-1
    :fromid: p3dnd-is-level-nd
    :points: 10
 
-.. selectquestion:: p3dnd-sum13-parsons-nd-sq
+.. selectquestion:: p3dnd-sum13-parsons-nd-sq-1
    :fromid: p3dnd-sum13-nd
    :points: 10
 
-.. selectquestion:: p3dnd-total-eight-nine-nd-sq
+.. selectquestion:: p3dnd-total-eight-nine-nd-sq-1
    :fromid: p3dnd-total-eight-nine-nd
    :points: 10
 
-.. selectquestion:: p3dnd-max-block-nd-sq
+.. selectquestion:: p3dnd-max-block-nd-sq-1
    :fromid: p3dnd-max-block-nd
    :points: 10
 
-.. selectquestion:: p3dnd-zero-front-nd-sq
+.. selectquestion:: p3dnd-zero-front-nd-sq-1
    :fromid: p3dnd-zero-front-nd
    :points: 10
 
-.. selectquestion:: p3dnd-sum-digits-nd-sq
+.. selectquestion:: p3dnd-sum-digits-nd-sq-1
    :fromid: p3dnd-sum-digits-nd
    :points: 10
 
-.. selectquestion:: p3dnd-two-two-nd-sq
+.. selectquestion:: p3dnd-two-two-nd-sq-1
    :fromid: p3dnd-two-two-nd
    :points: 10
 
-.. selectquestion:: p3dnd-bob-there-nd-sq
+.. selectquestion:: p3dnd-bob-there-nd-sq-1
    :fromid: p3dnd-bob-there-nd
    :points: 10
 
-.. selectquestion:: p3dnd-two-sum-nd-sq
+.. selectquestion:: p3dnd-two-sum-nd-sq-1
    :fromid: p3dnd-two-sum-nd
    :points: 10
 
-.. selectquestion:: p3dnd-palindrome-number-nd-sq
+.. selectquestion:: p3dnd-palindrome-number-nd-sq-1
    :fromid: p3dnd-palindrome-number-nd
    :points: 10
 

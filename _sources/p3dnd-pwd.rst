@@ -9,55 +9,55 @@ on it for about five minutes without solving it.
 Problems
 ==============
 
-.. selectquestion:: p3dnd-front-back-wd-sq
+.. selectquestion:: p3dnd-front-back-wd-sq-1
    :fromid: p3dnd-front-back-wd
    :points: 10
 
-.. selectquestion:: p3dnd-in-back-wd-sq
+.. selectquestion:: p3dnd-in-back-wd-sq-1
    :fromid: p3dnd-in-back-wd
    :points: 10
 
-.. selectquestion:: p3dnd-has22-parsons-wd-sq
+.. selectquestion:: p3dnd-has22-parsons-wd-sq-1
    :fromid: p3dnd-has22_wd
    :points: 10
 
-.. selectquestion:: p3dnd-is-level-wd-sq
+.. selectquestion:: p3dnd-is-level-wd-sq-1
    :fromid: p3dnd-is-level-wd
    :points: 10
 
-.. selectquestion:: p3dnd-sum13-parsons-wd-sq
+.. selectquestion:: p3dnd-sum13-parsons-wd-sq-1
    :fromid: p3dnd-sum13-wd
    :points: 10
 
-.. selectquestion:: p3dnd-total-eight-nine-wd-sq
+.. selectquestion:: p3dnd-total-eight-nine-wd-sq-1
    :fromid: p3dnd-total-eight-nine-wd
    :points: 10
 
-.. selectquestion:: p3dnd-max-block-wd-sq
+.. selectquestion:: p3dnd-max-block-wd-sq-1
    :fromid: p3dnd-max-block-wd
    :points: 10
 
-.. selectquestion:: p3dnd-zero-front-wd-sq
+.. selectquestion:: p3dnd-zero-front-wd-sq-1
    :fromid: p3dnd-zero-front-wd
    :points: 10
 
-.. selectquestion:: p3dnd-sum-digits-wd-sq
+.. selectquestion:: p3dnd-sum-digits-wd-sq-1
    :fromid: p3dnd-sum-digits-wd
    :points: 10
 
-.. selectquestion:: p3dnd-two-two-wd-sq
+.. selectquestion:: p3dnd-two-two-wd-sq-1
    :fromid: p3dnd-two-two-wd
    :points: 10
 
-.. selectquestion:: p3dnd-bob-there-wd-sq
+.. selectquestion:: p3dnd-bob-there-wd-sq-1
    :fromid: p3dnd-bob-there-wd
    :points: 10
 
-.. selectquestion:: p3dnd-two-sum-wd-sq
+.. selectquestion:: p3dnd-two-sum-wd-sq-1
    :fromid: p3dnd-two-sum-wd
    :points: 10
 
-.. selectquestion:: p3dnd-palindrome-number-wd-sq
+.. selectquestion:: p3dnd-palindrome-number-wd-sq-1
    :fromid: p3dnd-palindrome-number-wd
    :points: 10
 
