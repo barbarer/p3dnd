@@ -1221,7 +1221,7 @@ Problems
    =====
       return []
 
-.. parsonsprob:: p3dnd-palindrome-number-nd
+.. parsonsprob:: p3dnd-palindrome-number-nd-v2
    :numbered: left
    :adaptive:
 
@@ -1230,7 +1230,7 @@ Problems
    if the digits read the same backwards as forwards.
 
    .. table:: 
-      :name: p3dnd-palindrome-number-nd-table
+      :name: p3dnd-palindrome-number-nd-table-v2
       :class: longtable
       :align: left
       :width: 80%
@@ -1242,7 +1242,7 @@ Problems
       +----------------------------------+---------------------------------------+
       |``isPalindrome(888)``             | ``True``                              |
       +----------------------------------+---------------------------------------+
-      |``isPalindrome(678)``             | ``[]``                                |
+      |``isPalindrome(678)``             | ``False``                             |
       +----------------------------------+---------------------------------------+
    -----
    def isPalindrome(x):
@@ -1253,16 +1253,16 @@ Problems
    =====
       while left < right:
    =====
-         if strx[left] != strx[right]:
+          if strx[left] != strx[right]:
    =====
               return False
    =====
-        left += 1
-        right -= 1
+          left += 1
+          right -= 1
    =====
       return True
 
-.. parsonsprob:: p3dnd-palindrome-number-wd
+.. parsonsprob:: p3dnd-palindrome-number-wd-v2
    :numbered: left
    :adaptive:
 
@@ -1271,7 +1271,7 @@ Problems
    if the digits read the same backwards as forwards.
 
    .. table:: 
-      :name: p3dnd-palindrome-number-wd-table
+      :name: p3dnd-palindrome-number-wd-table-v2
       :class: longtable
       :align: left
       :width: 80%
@@ -1283,7 +1283,7 @@ Problems
       +----------------------------------+---------------------------------------+
       |``isPalindrome(888)``             | ``True``                              |
       +----------------------------------+---------------------------------------+
-      |``isPalindrome(678)``             | ``[]``                                |
+      |``isPalindrome(678)``             | ``False``                             |
       +----------------------------------+---------------------------------------+
    -----
    def isPalindrome(x):
@@ -1297,15 +1297,15 @@ Problems
    ===== 
       while left < right:
    =====
-         if strx[left] != strx[right]:
+          if strx[left] != strx[right]:
    =====
               return False
    =====
-        left += 1
-        right -= 1
+          left += 1
+          right -= 1
    =====
-        left -= 1
-        right += 1 #paired: left and right should be incremented and decremented respectively
+          left -= 1
+          right += 1 #paired: left and right should be incremented and decremented respectively
     =====
       return True
         

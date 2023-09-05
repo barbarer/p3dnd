@@ -57,8 +57,8 @@ Problems
    :fromid: p3dnd-two-sum-nd
    :points: 10
 
-.. selectquestion:: p3dnd-palindrome-number-nd-sq-1
-   :fromid: p3dnd-palindrome-number-nd
+.. selectquestion:: p3dnd-palindrome-number-nd-sq-2
+   :fromid: p3dnd-palindrome-number-nd-w2
    :points: 10
 
 Feedback
